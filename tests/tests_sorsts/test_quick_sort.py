@@ -20,3 +20,9 @@ class Test_quick_sort(unittest.TestCase):
 
    def test_quick_one(self):
       self.assertEqual(quick_sort([9]), [9])
+
+
+   def test_bubble_float(self):
+      self.assertEqual(quick_sort([1.7, 0.9, 5.4, 3.2, 2.0]), sorted([1.7, 0.9, 5.4, 3.2, 2.0]))
+
+

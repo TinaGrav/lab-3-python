@@ -10,7 +10,7 @@ def bucket_sort(a: list[float], buckets: int or None = None) -> list[float]:
     max_el = max(a)
     for el in a:
         if el < 0:
-            raise ValueError("Negative numbers for bucket sort")
+            raise ValueError("Negative numbers for bucket sort\n Введите другое число, перезапустив программу")
         bucket_number = int(buckets * el / (max_el + 1))
         bucket_list[bucket_number].append(el)
     answer_list = []
@@ -19,4 +19,3 @@ def bucket_sort(a: list[float], buckets: int or None = None) -> list[float]:
         for number in bucket:
             answer_list.append(number)
     return answer_list
-print(bucket_sort([1, 6, 0, 3, 8, 6, 5, 4], 3))

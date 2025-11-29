@@ -3,6 +3,10 @@ def counting_sort(a: list[int]) -> list[int]:
     count_list = [0] * (max_el + 1)
     final_list = [0] * len(a)
     for el in a:
+        if el < 0:
+            raise ValueError("Negative for counting_sort\n Введите другое число, перезапустив программу")
+        if int(el) != el:
+            raise ValueError("Float for counting_sort\n Введите другое число, перезапустив программу")
         count_list[el] += 1
     for i in range(1, max_el + 1):
         count_list[i] += count_list[i - 1]
@@ -11,4 +15,3 @@ def counting_sort(a: list[int]) -> list[int]:
         count_list[el] -= 1
     return final_list
 
-print(counting_sort([2, 6, 9, 1, 3]))

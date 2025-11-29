@@ -16,3 +16,13 @@ class Test_counting_sort(unittest.TestCase):
 
    def test_counting_one(self):
       self.assertEqual(counting_sort([5]), [5])
+
+
+   def test_counting_neg(self):
+      with self.assertRaises(ValueError):
+         counting_sort([-100, 0, 90])
+
+
+   def test_counting_float(self):
+      with self.assertRaises(ValueError):
+         counting_sort([19.99, 0.8, 90])
