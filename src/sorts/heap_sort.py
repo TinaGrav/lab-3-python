@@ -23,4 +23,3 @@ def max_heap(a, index, size):
         a[largest], a[index] = a[index], a[largest]
         max_heap(a, largest, size)
 
-print(heap_sort([7.9, -10, 3]))

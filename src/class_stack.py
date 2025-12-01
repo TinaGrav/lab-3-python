@@ -28,8 +28,3 @@ class Stack(list):
             raise IndexError("Error: stack is empty")
         return min(self)
 
-stack = Stack([])
-stack.push(1)
-stack.push(2)
-
-print(stack.min())
